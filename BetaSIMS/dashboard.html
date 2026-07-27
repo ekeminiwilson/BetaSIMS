@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BetaSIMS Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+<!-- Sidebar -->
+
+<aside id="sidebar" class="bg-blue-900 text-white w-64 p-6">
+
+<h1 class="text-3xl font-bold mb-10">
+🎓 BetaSIMS
+</h1>
+
+<ul class="space-y-4">
+
+<li>
+<a href="dashboard.html"
+class="block hover:bg-blue-700 p-3 rounded">
+🏠 Dashboard
+</a>
+</li>
+
+<li>
+<a href="students.html"
+class="block hover:bg-blue-700 p-3 rounded">
+👨‍🎓 Students
+</a>
+</li>
+
+<li>
+<a href="profile.html"
+class="block hover:bg-blue-700 p-3 rounded">
+👤 Profile
+</a>
+</li>
+
+<li>
+<button
+onclick="toggleDarkMode()"
+class="w-full bg-gray-700 py-2 rounded">
+
+🌙 Dark Mode
+
+</button>
+</li>
+
+<li>
+<button
+onclick="logout()"
+class="w-full bg-red-600 py-2 rounded">
+
+Logout
+
+</button>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="flex-1">
+
+<!-- Navbar -->
+
+<div class="bg-white shadow flex justify-between items-center px-8 py-4">
+
+<div>
+
+<button
+onclick="toggleSidebar()"
+class="bg-blue-700 text-white px-4 py-2 rounded">
+
+☰
+
+</button>
+
+</div>
+
+<div>
+
+<h2 class="text-2xl font-bold">
+
+Dashboard
+
+</h2>
+
+</div>
+
+<div id="clock"
+class="font-semibold text-blue-700">
+
+</div>
+
+</div>
+
+<!-- Cards -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8">
+
+<div class="card bg-blue-600 text-white rounded-xl p-6 shadow">
+
+<h3>Total Students</h3>
+
+<p id="studentCount"
+class="text-4xl font-bold mt-3">
+
+0
+
+</p>
+
+</div>
+
+<div class="card bg-green-600 text-white rounded-xl p-6 shadow">
+
+<h3>Departments</h3>
+
+<p class="text-4xl font-bold mt-3">
+
+8
+
+</p>
+
+</div>
+
+<div class="card bg-purple-600 text-white rounded-xl p-6 shadow">
+
+<h3>Courses</h3>
+
+<p class="text-4xl font-bold mt-3">
+
+24
+
+</p>
+
+</div>
+
+<div class="card bg-orange-500 text-white rounded-xl p-6 shadow">
+
+<h3>Graduates</h3>
+
+<p class="text-4xl font-bold mt-3">
+
+95
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Chart -->
+
+<div class="bg-white rounded-xl shadow mx-8 p-6">
+
+<h2 class="text-2xl font-bold mb-5">
+
+Student Statistics
+
+</h2>
+
+<canvas id="myChart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
